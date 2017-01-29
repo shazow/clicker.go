@@ -10,11 +10,14 @@ import (
 func main() {
 	vecty.SetTitle("clicker.go")
 	g := components.NewGame()
-	g.AddCounter(&components.CounterView{Label: "requests"})
+
+	reqCounter := components.NewCounterView("requests")
+	reqCounter.Button("Add Goroutine")
+	g.AddCounter(reqCounter)
 
 	vecty.RenderBody(g)
 
-	ticker := time.Tick(500 * time.Millisecond)
+	ticker := time.Tick(50 * time.Millisecond)
 	for _ = range ticker {
 		g.Tick()
 	}

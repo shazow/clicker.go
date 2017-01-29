@@ -26,7 +26,7 @@ func (g *GameView) Render() *vecty.HTML {
 
 func (g *GameView) Tick() {
 	for _, c := range g.Counters {
-		c.Increment(1)
+		c.Increment()
 	}
 	vecty.Rerender(g)
 }
