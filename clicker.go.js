@@ -16171,7 +16171,7 @@ $packages["strings"] = (function() {
 	return $pkg;
 })();
 $packages["github.com/gopherjs/vecty"] = (function() {
-	var $pkg = {}, $init, fmt, js, strings, Core, Component, Unmounter, ComponentOrHTML, Restorer, HTML, EventListener, Event, MarkupOrComponentOrHTML, Markup, List, ptrType, funcType, ptrType$1, ptrType$2, sliceType, sliceType$1, sliceType$2, sliceType$3, funcType$1, ptrType$3, mapType, mapType$1, ptrType$4, funcType$2, Tag, Text, Rerender, doRender, renderHandleNil, doRestore, RenderBody, SetTitle, removeNode, replaceNode, apply;
+	var $pkg = {}, $init, fmt, js, strings, Core, Component, Unmounter, ComponentOrHTML, Restorer, HTML, EventListener, Event, MarkupOrComponentOrHTML, Markup, ptrType, funcType, ptrType$1, ptrType$2, sliceType, sliceType$1, sliceType$2, sliceType$3, funcType$1, ptrType$3, mapType, mapType$1, ptrType$4, funcType$2, Tag, Text, Rerender, doRender, renderHandleNil, doRestore, RenderBody, SetTitle, removeNode, replaceNode, apply;
 	fmt = $packages["fmt"];
 	js = $packages["github.com/gopherjs/gopherjs/js"];
 	strings = $packages["strings"];
@@ -16241,7 +16241,6 @@ $packages["github.com/gopherjs/vecty"] = (function() {
 	});
 	MarkupOrComponentOrHTML = $pkg.MarkupOrComponentOrHTML = $newType(8, $kindInterface, "vecty.MarkupOrComponentOrHTML", true, "github.com/gopherjs/vecty", true, null);
 	Markup = $pkg.Markup = $newType(8, $kindInterface, "vecty.Markup", true, "github.com/gopherjs/vecty", true, null);
-	List = $pkg.List = $newType(12, $kindSlice, "vecty.List", true, "github.com/gopherjs/vecty", true, null);
 	ptrType = $ptrType(js.Object);
 	funcType = $funcType([ptrType], [], false);
 	ptrType$1 = $ptrType(HTML);
@@ -16851,26 +16850,9 @@ $packages["github.com/gopherjs/vecty"] = (function() {
 		$s = -1; return;
 		/* */ } return; } if ($f === undefined) { $f = { $blk: apply }; } $f.$ptr = $ptr; $f._r = _r; $f._ref = _ref; $f.h = h; $f.m = m; $f.m$1 = m$1; $f.m$2 = m$2; $f.m$3 = m$3; $f.m$4 = m$4; $f.$s = $s; $f.$r = $r; return $f;
 	};
-	List.prototype.Apply = function(h) {
-		var $ptr, _i, _ref, h, l, m, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _i = $f._i; _ref = $f._ref; h = $f.h; l = $f.l; m = $f.m; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		l = this;
-		_ref = l;
-		_i = 0;
-		/* while (true) { */ case 1:
-			/* if (!(_i < _ref.$length)) { break; } */ if(!(_i < _ref.$length)) { $s = 2; continue; }
-			m = ((_i < 0 || _i >= _ref.$length) ? $throwRuntimeError("index out of range") : _ref.$array[_ref.$offset + _i]);
-			$r = apply(m, h); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-			_i++;
-		/* } */ $s = 1; continue; case 2:
-		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: List.prototype.Apply }; } $f.$ptr = $ptr; $f._i = _i; $f._ref = _ref; $f.h = h; $f.l = l; $f.m = m; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	$ptrType(List).prototype.Apply = function(h) { return this.$get().Apply(h); };
 	ptrType$3.methods = [{prop: "Context", name: "Context", pkg: "", typ: $funcType([], [ptrType$3], false)}];
 	ptrType$1.methods = [{prop: "restoreText", name: "restoreText", pkg: "github.com/gopherjs/vecty", typ: $funcType([ptrType$1], [], false)}, {prop: "restoreHTML", name: "restoreHTML", pkg: "github.com/gopherjs/vecty", typ: $funcType([ptrType$1], [], false)}, {prop: "Restore", name: "Restore", pkg: "", typ: $funcType([ComponentOrHTML], [], false)}];
 	ptrType$2.methods = [{prop: "PreventDefault", name: "PreventDefault", pkg: "", typ: $funcType([], [ptrType$2], false)}, {prop: "StopPropagation", name: "StopPropagation", pkg: "", typ: $funcType([], [ptrType$2], false)}, {prop: "Apply", name: "Apply", pkg: "", typ: $funcType([ptrType$1], [], false)}];
-	List.methods = [{prop: "Apply", name: "Apply", pkg: "", typ: $funcType([ptrType$1], [], false)}];
 	Core.init("github.com/gopherjs/vecty", [{prop: "prevRender", name: "prevRender", exported: false, typ: ptrType$1, tag: ""}]);
 	Component.init([{prop: "Context", name: "Context", pkg: "", typ: $funcType([], [ptrType$3], false)}, {prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType$1], false)}]);
 	Unmounter.init([{prop: "Unmount", name: "Unmount", pkg: "", typ: $funcType([], [], false)}]);
@@ -16881,7 +16863,6 @@ $packages["github.com/gopherjs/vecty"] = (function() {
 	Event.init("", [{prop: "Object", name: "", exported: true, typ: ptrType, tag: ""}, {prop: "Target", name: "Target", exported: true, typ: ptrType, tag: ""}]);
 	MarkupOrComponentOrHTML.init([]);
 	Markup.init([{prop: "Apply", name: "Apply", pkg: "", typ: $funcType([ptrType$1], [], false)}]);
-	List.init(MarkupOrComponentOrHTML);
 	$init = function() {
 		$pkg.$init = function() {};
 		/* */ var $f, $c = false, $s = 0, $r; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
@@ -16893,88 +16874,8 @@ $packages["github.com/gopherjs/vecty"] = (function() {
 	$pkg.$init = $init;
 	return $pkg;
 })();
-$packages["github.com/gopherjs/vecty/storeutil"] = (function() {
-	var $pkg = {}, $init, fmt, ListenerRegistry, ptrType, sliceType, funcType, ptrType$1, mapType, NewListenerRegistry;
-	fmt = $packages["fmt"];
-	ListenerRegistry = $pkg.ListenerRegistry = $newType(0, $kindStruct, "storeutil.ListenerRegistry", true, "github.com/gopherjs/vecty/storeutil", true, function(listeners_) {
-		this.$val = this;
-		if (arguments.length === 0) {
-			this.listeners = false;
-			return;
-		}
-		this.listeners = listeners_;
-	});
-	ptrType = $ptrType($Int);
-	sliceType = $sliceType($emptyInterface);
-	funcType = $funcType([], [], false);
-	ptrType$1 = $ptrType(ListenerRegistry);
-	mapType = $mapType($emptyInterface, funcType);
-	NewListenerRegistry = function() {
-		var $ptr;
-		return new ListenerRegistry.ptr({});
-	};
-	$pkg.NewListenerRegistry = NewListenerRegistry;
-	ListenerRegistry.ptr.prototype.Add = function(key, listener) {
-		var $ptr, _entry, _key, _r, _tuple, key, listener, ok, r, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _entry = $f._entry; _key = $f._key; _r = $f._r; _tuple = $f._tuple; key = $f.key; listener = $f.listener; ok = $f.ok; r = $f.r; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		r = this;
-		if ($interfaceIsEqual(key, $ifaceNil)) {
-			key = $newDataPointer(0, ptrType);
-		}
-		_tuple = (_entry = r.listeners[$emptyInterface.keyFor(key)], _entry !== undefined ? [_entry.v, true] : [$throwNilPointerError, false]);
-		ok = _tuple[1];
-		/* */ if (ok) { $s = 1; continue; }
-		/* */ $s = 2; continue;
-		/* if (ok) { */ case 1:
-			_r = fmt.Sprintf("listener with key already exists: %v", new sliceType([key])); /* */ $s = 3; case 3: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
-			$panic(new $String(_r));
-		/* } */ case 2:
-		_key = key; (r.listeners || $throwRuntimeError("assignment to entry in nil map"))[$emptyInterface.keyFor(_key)] = { k: _key, v: listener };
-		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: ListenerRegistry.ptr.prototype.Add }; } $f.$ptr = $ptr; $f._entry = _entry; $f._key = _key; $f._r = _r; $f._tuple = _tuple; $f.key = key; $f.listener = listener; $f.ok = ok; $f.r = r; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	ListenerRegistry.prototype.Add = function(key, listener) { return this.$val.Add(key, listener); };
-	ListenerRegistry.ptr.prototype.Remove = function(key) {
-		var $ptr, key, r;
-		r = this;
-		delete r.listeners[$emptyInterface.keyFor(key)];
-	};
-	ListenerRegistry.prototype.Remove = function(key) { return this.$val.Remove(key); };
-	ListenerRegistry.ptr.prototype.Fire = function() {
-		var $ptr, _entry, _i, _keys, _ref, l, r, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _entry = $f._entry; _i = $f._i; _keys = $f._keys; _ref = $f._ref; l = $f.l; r = $f.r; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		r = this;
-		_ref = r.listeners;
-		_i = 0;
-		_keys = $keys(_ref);
-		/* while (true) { */ case 1:
-			/* if (!(_i < _keys.length)) { break; } */ if(!(_i < _keys.length)) { $s = 2; continue; }
-			_entry = _ref[_keys[_i]];
-			if (_entry === undefined) {
-				_i++;
-				/* continue; */ $s = 1; continue;
-			}
-			l = _entry.v;
-			$r = l(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-			_i++;
-		/* } */ $s = 1; continue; case 2:
-		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: ListenerRegistry.ptr.prototype.Fire }; } $f.$ptr = $ptr; $f._entry = _entry; $f._i = _i; $f._keys = _keys; $f._ref = _ref; $f.l = l; $f.r = r; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	ListenerRegistry.prototype.Fire = function() { return this.$val.Fire(); };
-	ptrType$1.methods = [{prop: "Add", name: "Add", pkg: "", typ: $funcType([$emptyInterface, funcType], [], false)}, {prop: "Remove", name: "Remove", pkg: "", typ: $funcType([$emptyInterface], [], false)}, {prop: "Fire", name: "Fire", pkg: "", typ: $funcType([], [], false)}];
-	ListenerRegistry.init("github.com/gopherjs/vecty/storeutil", [{prop: "listeners", name: "listeners", exported: false, typ: mapType, tag: ""}]);
-	$init = function() {
-		$pkg.$init = function() {};
-		/* */ var $f, $c = false, $s = 0, $r; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		$r = fmt.$init(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		/* */ } return; } if ($f === undefined) { $f = { $blk: $init }; } $f.$s = $s; $f.$r = $r; return $f;
-	};
-	$pkg.$init = $init;
-	return $pkg;
-})();
 $packages["github.com/gopherjs/vecty/elem"] = (function() {
-	var $pkg = {}, $init, vecty, Body, Button, Div;
+	var $pkg = {}, $init, vecty, Body, Button, Div, Header1;
 	vecty = $packages["github.com/gopherjs/vecty"];
 	Body = function(markup) {
 		var $ptr, _r, markup, $s, $r;
@@ -17000,6 +16901,14 @@ $packages["github.com/gopherjs/vecty/elem"] = (function() {
 		/* */ } return; } if ($f === undefined) { $f = { $blk: Div }; } $f.$ptr = $ptr; $f._r = _r; $f.markup = markup; $f.$s = $s; $f.$r = $r; return $f;
 	};
 	$pkg.Div = Div;
+	Header1 = function(markup) {
+		var $ptr, _r, markup, $s, $r;
+		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _r = $f._r; markup = $f.markup; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
+		_r = vecty.Tag("h1", markup); /* */ $s = 1; case 1: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
+		$s = -1; return _r;
+		/* */ } return; } if ($f === undefined) { $f = { $blk: Header1 }; } $f.$ptr = $ptr; $f._r = _r; $f.markup = markup; $f.$s = $s; $f.$r = $r; return $f;
+	};
+	$pkg.Header1 = Header1;
 	$init = function() {
 		$pkg.$init = function() {};
 		/* */ var $f, $c = false, $s = 0, $r; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
@@ -17026,209 +16935,43 @@ $packages["github.com/gopherjs/vecty/event"] = (function() {
 	$pkg.$init = $init;
 	return $pkg;
 })();
-$packages["github.com/shazow/clicker.go/components"] = (function() {
-	var $pkg = {}, $init, fmt, vecty, elem, event, sync, Counter, CounterView, GameView, IncrementButton, ptrType, sliceType, sliceType$1, sliceType$2, ptrType$1, ptrType$2, ptrType$3, ptrType$4, ptrType$5, funcType, NewCounterView, NewGame;
+$packages["github.com/shazow/clicker.go"] = (function() {
+	var $pkg = {}, $init, fmt, vecty, elem, event, time, View, ptrType, sliceType, sliceType$1, ptrType$1, ptrType$2, funcType, main;
 	fmt = $packages["fmt"];
 	vecty = $packages["github.com/gopherjs/vecty"];
 	elem = $packages["github.com/gopherjs/vecty/elem"];
 	event = $packages["github.com/gopherjs/vecty/event"];
-	sync = $packages["sync"];
-	Counter = $pkg.Counter = $newType(8, $kindInterface, "components.Counter", true, "github.com/shazow/clicker.go/components", true, null);
-	CounterView = $pkg.CounterView = $newType(0, $kindStruct, "components.CounterView", true, "github.com/shazow/clicker.go/components", true, function(Core_, mu_, count_, rate_, button_, Label_) {
+	time = $packages["time"];
+	View = $pkg.View = $newType(0, $kindStruct, "main.View", true, "github.com/shazow/clicker.go", true, function(Core_, Count_, OnClick_) {
 		this.$val = this;
 		if (arguments.length === 0) {
 			this.Core = new vecty.Core.ptr(ptrType.nil);
-			this.mu = new sync.RWMutex.ptr(new sync.Mutex.ptr(0, 0), 0, 0, 0, 0);
-			this.count = 0;
-			this.rate = 0;
-			this.button = $ifaceNil;
-			this.Label = "";
-			return;
-		}
-		this.Core = Core_;
-		this.mu = mu_;
-		this.count = count_;
-		this.rate = rate_;
-		this.button = button_;
-		this.Label = Label_;
-	});
-	GameView = $pkg.GameView = $newType(0, $kindStruct, "components.GameView", true, "github.com/shazow/clicker.go/components", true, function(Core_, Counters_) {
-		this.$val = this;
-		if (arguments.length === 0) {
-			this.Core = new vecty.Core.ptr(ptrType.nil);
-			this.Counters = sliceType$2.nil;
-			return;
-		}
-		this.Core = Core_;
-		this.Counters = Counters_;
-	});
-	IncrementButton = $pkg.IncrementButton = $newType(0, $kindStruct, "components.IncrementButton", true, "github.com/shazow/clicker.go/components", true, function(Core_, Label_, OnClick_) {
-		this.$val = this;
-		if (arguments.length === 0) {
-			this.Core = new vecty.Core.ptr(ptrType.nil);
-			this.Label = "";
+			this.Count = 0;
 			this.OnClick = $throwNilPointerError;
 			return;
 		}
 		this.Core = Core_;
-		this.Label = Label_;
+		this.Count = Count_;
 		this.OnClick = OnClick_;
 	});
 	ptrType = $ptrType(vecty.HTML);
-	sliceType = $sliceType($emptyInterface);
-	sliceType$1 = $sliceType(vecty.MarkupOrComponentOrHTML);
-	sliceType$2 = $sliceType(Counter);
-	ptrType$1 = $ptrType(vecty.Core);
-	ptrType$2 = $ptrType(CounterView);
-	ptrType$3 = $ptrType(GameView);
-	ptrType$4 = $ptrType(IncrementButton);
-	ptrType$5 = $ptrType(vecty.Event);
-	funcType = $funcType([ptrType$5], [], false);
-	NewCounterView = function(label) {
-		var $ptr, label;
-		return new CounterView.ptr(new vecty.Core.ptr(ptrType.nil), new sync.RWMutex.ptr(new sync.Mutex.ptr(0, 0), 0, 0, 0, 0), 0, 0.1, $ifaceNil, label);
-	};
-	$pkg.NewCounterView = NewCounterView;
-	CounterView.ptr.prototype.Button = function(label) {
-		var $ptr, c, label;
-		c = this;
-		c.button = new IncrementButton.ptr(new vecty.Core.ptr(ptrType.nil), label, (function(event$1) {
-			var $ptr, event$1;
-			c.rate = c.rate + (0.2);
-		}));
-	};
-	CounterView.prototype.Button = function(label) { return this.$val.Button(label); };
-	CounterView.ptr.prototype.Increment = function() {
-		var $ptr, c, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; c = $f.c; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		c = this;
-		$r = c.mu.Lock(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		c.count = c.count + (c.rate);
-		$r = c.mu.Unlock(); /* */ $s = 2; case 2: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: CounterView.ptr.prototype.Increment }; } $f.$ptr = $ptr; $f.c = c; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	CounterView.prototype.Increment = function() { return this.$val.Increment(); };
-	CounterView.ptr.prototype.Render = function() {
-		var $ptr, _arg, _arg$1, _r, _r$1, _r$2, _r$3, _r$4, _r$5, c, reqText, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _arg = $f._arg; _arg$1 = $f._arg$1; _r = $f._r; _r$1 = $f._r$1; _r$2 = $f._r$2; _r$3 = $f._r$3; _r$4 = $f._r$4; _r$5 = $f._r$5; c = $f.c; reqText = $f.reqText; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		c = this;
-		$r = c.mu.RLock(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		_r = fmt.Sprintf("%d %s", new sliceType([new $Int((c.count >> 0)), new $String(c.Label)])); /* */ $s = 2; case 2: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
-		reqText = _r;
-		$r = c.mu.RUnlock(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		/* */ if (!($interfaceIsEqual(c.button, $ifaceNil))) { $s = 4; continue; }
-		/* */ $s = 5; continue;
-		/* if (!($interfaceIsEqual(c.button, $ifaceNil))) { */ case 4:
-			_r$1 = vecty.Text(reqText, new sliceType$1([])); /* */ $s = 6; case 6: if($c) { $c = false; _r$1 = _r$1.$blk(); } if (_r$1 && _r$1.$blk !== undefined) { break s; }
-			_arg = _r$1;
-			_r$2 = c.button.Render(); /* */ $s = 7; case 7: if($c) { $c = false; _r$2 = _r$2.$blk(); } if (_r$2 && _r$2.$blk !== undefined) { break s; }
-			_arg$1 = _r$2;
-			_r$3 = elem.Div(new sliceType$1([_arg, _arg$1])); /* */ $s = 8; case 8: if($c) { $c = false; _r$3 = _r$3.$blk(); } if (_r$3 && _r$3.$blk !== undefined) { break s; }
-			$s = -1; return _r$3;
-		/* } */ case 5:
-		_r$4 = vecty.Text(reqText, new sliceType$1([])); /* */ $s = 9; case 9: if($c) { $c = false; _r$4 = _r$4.$blk(); } if (_r$4 && _r$4.$blk !== undefined) { break s; }
-		_r$5 = elem.Div(new sliceType$1([_r$4])); /* */ $s = 10; case 10: if($c) { $c = false; _r$5 = _r$5.$blk(); } if (_r$5 && _r$5.$blk !== undefined) { break s; }
-		$s = -1; return _r$5;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: CounterView.ptr.prototype.Render }; } $f.$ptr = $ptr; $f._arg = _arg; $f._arg$1 = _arg$1; $f._r = _r; $f._r$1 = _r$1; $f._r$2 = _r$2; $f._r$3 = _r$3; $f._r$4 = _r$4; $f._r$5 = _r$5; $f.c = c; $f.reqText = reqText; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	CounterView.prototype.Render = function() { return this.$val.Render(); };
-	NewGame = function() {
-		var $ptr;
-		return new GameView.ptr(new vecty.Core.ptr(ptrType.nil), new sliceType$2([]));
-	};
-	$pkg.NewGame = NewGame;
-	GameView.ptr.prototype.Render = function() {
-		var $ptr, _i, _r, _r$1, _ref, c, g, rendered, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _i = $f._i; _r = $f._r; _r$1 = $f._r$1; _ref = $f._ref; c = $f.c; g = $f.g; rendered = $f.rendered; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		g = this;
-		rendered = $makeSlice(vecty.List, 0, g.Counters.$length);
-		_ref = g.Counters;
-		_i = 0;
-		/* while (true) { */ case 1:
-			/* if (!(_i < _ref.$length)) { break; } */ if(!(_i < _ref.$length)) { $s = 2; continue; }
-			c = ((_i < 0 || _i >= _ref.$length) ? $throwRuntimeError("index out of range") : _ref.$array[_ref.$offset + _i]);
-			_r = c.Render(); /* */ $s = 3; case 3: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
-			rendered = $append(rendered, _r);
-			_i++;
-		/* } */ $s = 1; continue; case 2:
-		_r$1 = elem.Body($subslice(new sliceType$1(rendered.$array), rendered.$offset, rendered.$offset + rendered.$length)); /* */ $s = 4; case 4: if($c) { $c = false; _r$1 = _r$1.$blk(); } if (_r$1 && _r$1.$blk !== undefined) { break s; }
-		$s = -1; return _r$1;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: GameView.ptr.prototype.Render }; } $f.$ptr = $ptr; $f._i = _i; $f._r = _r; $f._r$1 = _r$1; $f._ref = _ref; $f.c = c; $f.g = g; $f.rendered = rendered; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	GameView.prototype.Render = function() { return this.$val.Render(); };
-	GameView.ptr.prototype.Tick = function() {
-		var $ptr, _i, _ref, c, g, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _i = $f._i; _ref = $f._ref; c = $f.c; g = $f.g; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		g = this;
-		_ref = g.Counters;
-		_i = 0;
-		/* while (true) { */ case 1:
-			/* if (!(_i < _ref.$length)) { break; } */ if(!(_i < _ref.$length)) { $s = 2; continue; }
-			c = ((_i < 0 || _i >= _ref.$length) ? $throwRuntimeError("index out of range") : _ref.$array[_ref.$offset + _i]);
-			$r = c.Increment(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-			_i++;
-		/* } */ $s = 1; continue; case 2:
-		$r = vecty.Rerender(g); /* */ $s = 4; case 4: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: GameView.ptr.prototype.Tick }; } $f.$ptr = $ptr; $f._i = _i; $f._ref = _ref; $f.c = c; $f.g = g; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	GameView.prototype.Tick = function() { return this.$val.Tick(); };
-	GameView.ptr.prototype.AddCounter = function(c) {
-		var $ptr, c, g;
-		g = this;
-		g.Counters = $append(g.Counters, c);
-	};
-	GameView.prototype.AddCounter = function(c) { return this.$val.AddCounter(c); };
-	IncrementButton.ptr.prototype.Render = function() {
-		var $ptr, _r, _r$1, inc, parts, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _r = $f._r; _r$1 = $f._r$1; inc = $f.inc; parts = $f.parts; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		inc = this;
-		_r = vecty.Text(inc.Label, new sliceType$1([])); /* */ $s = 1; case 1: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
-		parts = new sliceType$1([_r]);
-		if (!(inc.OnClick === $throwNilPointerError)) {
-			parts = $append(parts, event.Click(inc.OnClick));
-		}
-		_r$1 = elem.Button(parts); /* */ $s = 2; case 2: if($c) { $c = false; _r$1 = _r$1.$blk(); } if (_r$1 && _r$1.$blk !== undefined) { break s; }
-		$s = -1; return _r$1;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: IncrementButton.ptr.prototype.Render }; } $f.$ptr = $ptr; $f._r = _r; $f._r$1 = _r$1; $f.inc = inc; $f.parts = parts; $f.$s = $s; $f.$r = $r; return $f;
-	};
-	IncrementButton.prototype.Render = function() { return this.$val.Render(); };
-	ptrType$2.methods = [{prop: "Button", name: "Button", pkg: "", typ: $funcType([$String], [], false)}, {prop: "Increment", name: "Increment", pkg: "", typ: $funcType([], [], false)}, {prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType], false)}];
-	ptrType$3.methods = [{prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType], false)}, {prop: "Tick", name: "Tick", pkg: "", typ: $funcType([], [], false)}, {prop: "AddCounter", name: "AddCounter", pkg: "", typ: $funcType([Counter], [], false)}];
-	ptrType$4.methods = [{prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType], false)}];
-	Counter.init([{prop: "Context", name: "Context", pkg: "", typ: $funcType([], [ptrType$1], false)}, {prop: "Increment", name: "Increment", pkg: "", typ: $funcType([], [], false)}, {prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType], false)}]);
-	CounterView.init("github.com/shazow/clicker.go/components", [{prop: "Core", name: "", exported: true, typ: vecty.Core, tag: ""}, {prop: "mu", name: "mu", exported: false, typ: sync.RWMutex, tag: ""}, {prop: "count", name: "count", exported: false, typ: $Float64, tag: ""}, {prop: "rate", name: "rate", exported: false, typ: $Float64, tag: ""}, {prop: "button", name: "button", exported: false, typ: vecty.Component, tag: ""}, {prop: "Label", name: "Label", exported: true, typ: $String, tag: ""}]);
-	GameView.init("", [{prop: "Core", name: "", exported: true, typ: vecty.Core, tag: ""}, {prop: "Counters", name: "Counters", exported: true, typ: sliceType$2, tag: ""}]);
-	IncrementButton.init("", [{prop: "Core", name: "", exported: true, typ: vecty.Core, tag: ""}, {prop: "Label", name: "Label", exported: true, typ: $String, tag: ""}, {prop: "OnClick", name: "OnClick", exported: true, typ: funcType, tag: ""}]);
-	$init = function() {
-		$pkg.$init = function() {};
-		/* */ var $f, $c = false, $s = 0, $r; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		$r = fmt.$init(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = vecty.$init(); /* */ $s = 2; case 2: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = elem.$init(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = event.$init(); /* */ $s = 4; case 4: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = sync.$init(); /* */ $s = 5; case 5: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		/* */ } return; } if ($f === undefined) { $f = { $blk: $init }; } $f.$s = $s; $f.$r = $r; return $f;
-	};
-	$pkg.$init = $init;
-	return $pkg;
-})();
-$packages["github.com/shazow/clicker.go"] = (function() {
-	var $pkg = {}, $init, vecty, storeutil, components, time, main;
-	vecty = $packages["github.com/gopherjs/vecty"];
-	storeutil = $packages["github.com/gopherjs/vecty/storeutil"];
-	components = $packages["github.com/shazow/clicker.go/components"];
-	time = $packages["time"];
+	sliceType = $sliceType(vecty.MarkupOrComponentOrHTML);
+	sliceType$1 = $sliceType($emptyInterface);
+	ptrType$1 = $ptrType(View);
+	ptrType$2 = $ptrType(vecty.Event);
+	funcType = $funcType([ptrType$2], [], false);
 	main = function() {
-		var $ptr, _1, _2, _r, _tuple, g, reqCounter, ticker, $s, $r;
-		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _1 = $f._1; _2 = $f._2; _r = $f._r; _tuple = $f._tuple; g = $f.g; reqCounter = $f.reqCounter; ticker = $f.ticker; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
+		var $ptr, _1, _2, _r, _tuple, count, rate, ticker, v, $s, $r;
+		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _1 = $f._1; _2 = $f._2; _r = $f._r; _tuple = $f._tuple; count = $f.count; rate = $f.rate; ticker = $f.ticker; v = $f.v; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
+		rate = [rate];
 		vecty.SetTitle("clicker.go");
-		g = components.NewGame();
-		reqCounter = components.NewCounterView("requests");
-		reqCounter.Button("Add Goroutine");
-		g.AddCounter(reqCounter);
-		$r = vecty.RenderBody(g); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		count = 0;
+		rate[0] = 0.1;
+		v = new View.ptr(new vecty.Core.ptr(ptrType.nil), 0, (function(rate) { return function(param) {
+			var $ptr, param;
+			rate[0] = rate[0] + (0.1);
+		}; })(rate));
+		$r = vecty.RenderBody(v); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
 		ticker = time.Tick(new time.Duration(0, 50000000));
 		_1 = false;
 		_2 = ticker;
@@ -17239,25 +16982,49 @@ $packages["github.com/shazow/clicker.go"] = (function() {
 			if (!_1) {
 				/* break; */ $s = 3; continue;
 			}
-			$r = g.Tick(); /* */ $s = 5; case 5: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+			count = count + (rate[0]);
+			v.Count = (count >> 0);
+			$r = vecty.Rerender(v); /* */ $s = 5; case 5: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
 		/* } */ $s = 2; continue; case 3:
 		$s = -1; return;
-		/* */ } return; } if ($f === undefined) { $f = { $blk: main }; } $f.$ptr = $ptr; $f._1 = _1; $f._2 = _2; $f._r = _r; $f._tuple = _tuple; $f.g = g; $f.reqCounter = reqCounter; $f.ticker = ticker; $f.$s = $s; $f.$r = $r; return $f;
+		/* */ } return; } if ($f === undefined) { $f = { $blk: main }; } $f.$ptr = $ptr; $f._1 = _1; $f._2 = _2; $f._r = _r; $f._tuple = _tuple; $f.count = count; $f.rate = rate; $f.ticker = ticker; $f.v = v; $f.$s = $s; $f.$r = $r; return $f;
 	};
+	View.ptr.prototype.Render = function() {
+		var $ptr, _arg, _arg$1, _arg$2, _r, _r$1, _r$2, _r$3, _r$4, _r$5, _r$6, _r$7, _r$8, v, $s, $r;
+		/* */ $s = 0; var $f, $c = false; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $ptr = $f.$ptr; _arg = $f._arg; _arg$1 = $f._arg$1; _arg$2 = $f._arg$2; _r = $f._r; _r$1 = $f._r$1; _r$2 = $f._r$2; _r$3 = $f._r$3; _r$4 = $f._r$4; _r$5 = $f._r$5; _r$6 = $f._r$6; _r$7 = $f._r$7; _r$8 = $f._r$8; v = $f.v; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
+		v = this;
+		_r = vecty.Text("clicker.go", new sliceType([])); /* */ $s = 1; case 1: if($c) { $c = false; _r = _r.$blk(); } if (_r && _r.$blk !== undefined) { break s; }
+		_r$1 = elem.Header1(new sliceType([_r])); /* */ $s = 2; case 2: if($c) { $c = false; _r$1 = _r$1.$blk(); } if (_r$1 && _r$1.$blk !== undefined) { break s; }
+		_arg = _r$1;
+		_r$2 = fmt.Sprintf("%d %s", new sliceType$1([new $Int(v.Count), new $String("requests")])); /* */ $s = 3; case 3: if($c) { $c = false; _r$2 = _r$2.$blk(); } if (_r$2 && _r$2.$blk !== undefined) { break s; }
+		_r$3 = vecty.Text(_r$2, new sliceType([])); /* */ $s = 4; case 4: if($c) { $c = false; _r$3 = _r$3.$blk(); } if (_r$3 && _r$3.$blk !== undefined) { break s; }
+		_r$4 = elem.Div(new sliceType([_r$3])); /* */ $s = 5; case 5: if($c) { $c = false; _r$4 = _r$4.$blk(); } if (_r$4 && _r$4.$blk !== undefined) { break s; }
+		_arg$1 = _r$4;
+		_r$5 = vecty.Text("Add Goroutine", new sliceType([])); /* */ $s = 6; case 6: if($c) { $c = false; _r$5 = _r$5.$blk(); } if (_r$5 && _r$5.$blk !== undefined) { break s; }
+		_r$6 = elem.Button(new sliceType([_r$5, event.Click(v.OnClick)])); /* */ $s = 7; case 7: if($c) { $c = false; _r$6 = _r$6.$blk(); } if (_r$6 && _r$6.$blk !== undefined) { break s; }
+		_r$7 = elem.Div(new sliceType([_r$6])); /* */ $s = 8; case 8: if($c) { $c = false; _r$7 = _r$7.$blk(); } if (_r$7 && _r$7.$blk !== undefined) { break s; }
+		_arg$2 = _r$7;
+		_r$8 = elem.Body(new sliceType([_arg, _arg$1, _arg$2])); /* */ $s = 9; case 9: if($c) { $c = false; _r$8 = _r$8.$blk(); } if (_r$8 && _r$8.$blk !== undefined) { break s; }
+		$s = -1; return _r$8;
+		/* */ } return; } if ($f === undefined) { $f = { $blk: View.ptr.prototype.Render }; } $f.$ptr = $ptr; $f._arg = _arg; $f._arg$1 = _arg$1; $f._arg$2 = _arg$2; $f._r = _r; $f._r$1 = _r$1; $f._r$2 = _r$2; $f._r$3 = _r$3; $f._r$4 = _r$4; $f._r$5 = _r$5; $f._r$6 = _r$6; $f._r$7 = _r$7; $f._r$8 = _r$8; $f.v = v; $f.$s = $s; $f.$r = $r; return $f;
+	};
+	View.prototype.Render = function() { return this.$val.Render(); };
+	ptrType$1.methods = [{prop: "Render", name: "Render", pkg: "", typ: $funcType([], [ptrType], false)}];
+	View.init("", [{prop: "Core", name: "", exported: true, typ: vecty.Core, tag: ""}, {prop: "Count", name: "Count", exported: true, typ: $Int, tag: ""}, {prop: "OnClick", name: "OnClick", exported: true, typ: funcType, tag: ""}]);
 	$init = function() {
 		$pkg.$init = function() {};
 		/* */ var $f, $c = false, $s = 0, $r; if (this !== undefined && this.$blk !== undefined) { $f = this; $c = true; $s = $f.$s; $r = $f.$r; } s: while (true) { switch ($s) { case 0:
-		$r = vecty.$init(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = storeutil.$init(); /* */ $s = 2; case 2: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = components.$init(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$r = time.$init(); /* */ $s = 4; case 4: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
-		$pkg.Listeners = storeutil.NewListenerRegistry();
-		/* */ if ($pkg === $mainPkg) { $s = 5; continue; }
-		/* */ $s = 6; continue;
-		/* if ($pkg === $mainPkg) { */ case 5:
-			$r = main(); /* */ $s = 7; case 7: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		$r = fmt.$init(); /* */ $s = 1; case 1: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		$r = vecty.$init(); /* */ $s = 2; case 2: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		$r = elem.$init(); /* */ $s = 3; case 3: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		$r = event.$init(); /* */ $s = 4; case 4: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		$r = time.$init(); /* */ $s = 5; case 5: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
+		/* */ if ($pkg === $mainPkg) { $s = 6; continue; }
+		/* */ $s = 7; continue;
+		/* if ($pkg === $mainPkg) { */ case 6:
+			$r = main(); /* */ $s = 8; case 8: if($c) { $c = false; $r = $r.$blk(); } if ($r && $r.$blk !== undefined) { break s; }
 			$mainFinished = true;
-		/* } */ case 6:
+		/* } */ case 7:
 		/* */ } return; } if ($f === undefined) { $f = { $blk: $init }; } $f.$s = $s; $f.$r = $r; return $f;
 	};
 	$pkg.$init = $init;
